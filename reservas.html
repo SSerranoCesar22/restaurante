@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <article class="article article1">
+            <nav>
+                <ul>
+                    <button onclick="redirigirHome()" class="boton botones">home</button>
+                    <button onclick="redirigirAReservas()" class="boton botones">reservas</button>
+                    <button class="boton botones">contacto</button>
+                </ul>
+            </nav>
+        </article>
+        <article class="article2">
+            <h1>RESERVAS</h1>
+            <p> Selecciona el dia que quiere reservar: </p>
+            <nav>
+                <ul><img src="images/square-solid.svg" alt="disponible">Disponible</ul>
+                <ul><img src="images/noDispo.svg" alt="no disponible">No Disponible</ul>
+            </nav>
+            <div class="calendar">
+                <div class="days">
+                    <p>Lunes</p>
+                    <p>Martes</p>
+                    <p>Miercoles</p>
+                    <p>Jueves</p>
+                    <p>Viernes</p>
+                    <p>Sabado </p>
+                    <p>Domingo</p>
+                </div>
+                <div class="week">
+                    <div class="row1">
+                        <button onclick="seleccionarHora(27)">27</button>
+                        <button onclick="seleccionarHora(28)">28</button>
+                        <button onclick="seleccionarHora(29)">29</button>
+                        <button onclick="seleccionarHora(30)">30</button>
+                        <button onclick="seleccionarHora(1)">1</button>
+                        <button onclick="seleccionarHora(2)">2</button>
+                        <button onclick="seleccionarHora(3)">3</button>
+                    </div>
+                    <div class="row2">
+                        <button onclick="seleccionarHora(4)">4</button>
+                        <button onclick="seleccionarHora(5)">5</button>
+                        <button onclick="seleccionarHora(6)">6</button>
+                        <button onclick="seleccionarHora(7)">7</button>
+                        <button onclick="seleccionarHora(8)">8</button>
+                        <button onclick="seleccionarHora(9)">9</button>
+                        <button onclick="seleccionarHora(10)">10</button>
+                    </div>
+                    <div class="row3">
+                        <button onclick="seleccionarHora(11)">11</button>
+                        <button onclick="seleccionarHora(12)">12</button>
+                        <button onclick="seleccionarHora(13)">13</button>
+                        <button onclick="seleccionarHora(14)">14</button>
+                        <button onclick="seleccionarHora(15)">15</button>
+                        <button onclick="seleccionarHora(16)">16</button>
+                        <button onclick="seleccionarHora(17)">17</button>
+                    </div>
+                    <div class="row4">
+                        <button onclick="seleccionarHora(18)">18</button>
+                        <button onclick="seleccionarHora(19)">19</button>
+                        <button onclick="seleccionarHora(20)">20</button>
+                        <button onclick="seleccionarHora(21)">21</button>
+                        <button onclick="seleccionarHora(22)">22</button>
+                        <button onclick="seleccionarHora(23)">23</button>
+                        <button onclick="seleccionarHora(24)">24</button>
+                    </div>
+                    <div class="row5">
+                        <button onclick="seleccionarHora(25)">25</button>
+                        <button onclick="seleccionarHora(26)">26</button>
+                        <button onclick="seleccionarHora(27)">27</button>
+                        <button onclick="seleccionarHora(28)">28</button>
+                        <button onclick="seleccionarHora(29)">29</button>
+                        <button onclick="seleccionarHora(30)">30</button>
+                        <button onclick="seleccionarHora(31)">31</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </article>
+    </section>
+</body>
+<script src="Main.js"></script>
+
+</html>

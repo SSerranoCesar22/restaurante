@@ -1,0 +1,112 @@
+
+@media (max-width: 1024px) and (min-width: 600px) {
+    body {
+        background-color: black;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: column; /* Cambiar a columna para pantallas más pequeñas */
+        align-items: center; /* Centrar elementos horizontalmente */
+        color: white;
+    }
+
+    .article nav {
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        -webkit-transition: background-color 0.3s ease;
+        -moz-transition: background-color 0.3s ease;
+        -ms-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+    }
+
+    .article2 {
+        color: white;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 4em ;    }
+
+    .article2 p {
+        text-align: center;
+    }
+    .imagesRestauran{
+        margin-top: 5em;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .calendar{
+        display: flex;
+        flex-direction: column;
+    }
+    .days{
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        align-items: center;
+        gap: 10px;
+        border: 2px solid white;
+        text-align: center;
+        
+    }
+    
+    .week{
+        border: 2px solid white;
+        padding: 10px;
+    }
+    .row1,.row2,.row3,.row4,.row5{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .calendar button{
+        width: 7vh;
+        height: 7vh;
+    }
+}
+
+.boton {
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    display: inline-block;
+    color: #FFF;
+    background: #7F8C8D;
+    padding: 7px 20px;
+    white-space: nowrap;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 100px;
+    margin: 10px 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.botones {
+    background: #E74C3C;
+    box-shadow: 0px 5px 0px 0px #C0392B;
+}
+
+.botones:hover {
+    background: #ff5242;
+}
+
+.botones:active {
+    box-shadow: 0px 2px 0px 0px #C0392B;
+}
+
+#app-calendar{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(5,1fr);
+    background-color: green;
+    height: 100%;
+}
