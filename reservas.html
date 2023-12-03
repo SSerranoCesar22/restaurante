@@ -68,14 +68,32 @@
                     <div class="calendar-day calendar-item">Dom</div>
                 </div>
                 <div class="calendar-dates" id="dates">
-
                 </div>
             </div>
             <div class="datos-cliente">
-                <input type="text" id="nombre" placeholder="nombre" required>
-                <input type="number" id="telefono" placeholder="telefono" required>
-                <input type="email" id="correo" placeholder="correo" required>
-                <button onclick="enviarDatos()">Enviar datos</button>
+                <div class="user">
+                    <span>
+                        <img src="images/form/user-regular.svg" alt="user-logo">
+                        <input class="cliente" type="text" id="nombre" placeholder="nombre" required>
+                    </span>
+                </div>
+            <div>
+                <div>
+                    <span class="phone">
+                        <img src="images/form/phone-solid.svg" alt="tel-logo">
+                        <input class="cliente" type="number" id="telefono" placeholder="telefono" required>
+                    </span>
+                </div> 
+                <div class="email">
+                    <span>
+                        <img src="images/form/envelope-solid.svg" alt="email-logo">
+                        <input class="cliente" type="email" id="correo" placeholder="correo" required>
+                    </span>
+                </div>
+                <div class="env">
+                    <button type="button" id="enviarBtn" class="enviar">Enviar datos</button>
+
+                </div>
             </div>
         </form>
         </article>

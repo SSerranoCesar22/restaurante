@@ -36,19 +36,21 @@ nextMonthDOM.addEventListener("click", () => nextMonth());
 writeMonth(monthNumber);
 
 function writeMonth(month) {
-    for (let i = startDay(); i > 0; i--) {
-        dates.innerHTML += `<button class="calendar-date calendar-item last-days">${getTotalDays(monthNumber - 1) - (i - 1)}</button>`;
-    }
+  for (let i = startDay(); i > 0; i--) {
+    dates.innerHTML += `<button class="calendar-date calendar-item last-days">${
+      getTotalDays(monthNumber - 1) - (i - 1)
+    }</button>`;
+  }
 
-    for (let i = 1; i <= getTotalDays(month); i++) {
-        if (i === currentDay && month === monthNumber) {
-            dates.innerHTML += `<button class="calendar-dates calendar-item today" onclick="handleButtonClick(${i})">${i}</button>`;
-        } else if (i < currentDay && month === monthNumber) {
-            dates.innerHTML += `<button class="calendar-date calendar-item last-days">${i}</button>`;
-        } else {
-            dates.innerHTML += `<button class="calendar-dates calendar-item" onclick="handleButtonClick(${i})">${i}</button>`;
-        }
+  for (let i = 1; i <= getTotalDays(month); i++) {
+    if (i === currentDay && month === monthNumber) {
+      dates.innerHTML += `<button class="calendar-dates calendar-item " onclick="handleButtonClick(${i}, event)">${i}</button>`;
+    } else if (i < currentDay && month === monthNumber) {
+      dates.innerHTML += `<button class="calendar-date calendar-item last-days">${i}</button>`;
+    } else {
+      dates.innerHTML += `<button class="calendar-dates calendar-item " onclick="handleButtonClick(${i}, event)">${i}</button>`;
     }
+  }
 }
 
 function getTotalDays(month) {
@@ -108,31 +110,63 @@ function setNewDate() {
   writeMonth(monthNumber);
 }
 function isBookable() {
-    //falta implementar saber numero de mesas para saber cuantas reservas se  pueden hacer
+  //falta implementar saber numero de mesas para saber cuantas reservas se  pueden hacer
 }
-function handleButtonClick(day) {
-    selectedDay = day;
-    selectedHour = undefined; // Reiniciar la hora seleccionada
-    let horasSelector = document.getElementById("horas");
+function handleButtonClick(day, event) {
+  let previouslySelectedButton = document.querySelector(
+    ".calendar-dates.selected"
+  );
+  if (previouslySelectedButton) {
+    previouslySelectedButton.classList.remove("selected");
+  }
 
-    // Cambia el estilo para mostrar el selector
-    horasSelector.style.display = "block";
+  selectedDay = day;
+  selectedHour = undefined;
+
+  let horasSelector = document.getElementById("horas");
+  horasSelector.style.display = "block";
+
+  event.target.classList.add("selected");
+
+  event.preventDefault();
+
+  event.stopPropagation();
 }
 function handleHourSelection() {
-    // Se llama cuando se selecciona una hora
-    selectedHour = document.getElementById("horas").value;
+  selectedHour = document.getElementById("horas").value;
 }
 function enviarDatos() {
-    const nombre = document.getElementById("nombre").value;
-    const telefono = document.getElementById("telefono").value;
-    const email = document.getElementById("email").value;
+  const nombre = document.getElementById("nombre").value;
+  const telefono = document.getElementById("telefono").value;
+  const email = document.getElementById("correo").value;
 
-    // Verificar si se ha seleccionado un día y una hora antes de mostrar el mensaje
-    if (selectedDay !== undefined && selectedHour !== undefined) {
-        const mensaje = `Reserva seleccionada para el día ${selectedDay} a las ${selectedHour}, datos de contacto: nombre: ${nombre} telefono: ${telefono} email: ${email}`;
-        alert(mensaje);
-    } else {
-        // Mostrar un aviso si no se ha seleccionado un día o una hora
-        alert("Por favor, selecciona un día y una hora antes de enviar.");
-    }
+  if (!isValidEmail(email)) {
+    alert("Por favor, introduce un correo electrónico válido.");
+    return; 
 }
+  if (selectedDay !== undefined) {
+    const mensaje = `Reserva seleccionada para el día ${selectedDay}, datos de contacto: ${"\n"} nombre: ${nombre} ${"\n"}telefono: ${telefono} ${"\n"} email: ${email}`;
+    alert(mensaje);
+  } else {
+    alert("Por favor, selecciona un día antes de enviar.");
+  }
+}
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+document
+  .getElementById("enviarBtn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+
+    enviarDatos();
+  });
+document
+  .getElementById("reservas-form")
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+    }
+  });
