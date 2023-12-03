@@ -21,74 +21,67 @@
         </article>
         <article class="article2">
             <h1>RESERVAS</h1>
-            <p> Selecciona el dia que quiere reservar: </p>
-            <nav>
-                <ul><img src="images/square-solid.svg" alt="disponible">Disponible</ul>
-                <ul><img src="images/noDispo.svg" alt="no disponible">No Disponible</ul>
-            </nav>
-            <div class="calendar">
-                <div class="days">
-                    <p>Lunes</p>
-                    <p>Martes</p>
-                    <p>Miercoles</p>
-                    <p>Jueves</p>
-                    <p>Viernes</p>
-                    <p>Sabado </p>
-                    <p>Domingo</p>
-                </div>
-                <div class="week">
-                    <div class="row1">
-                        <button onclick="seleccionarHora(27)">27</button>
-                        <button onclick="seleccionarHora(28)">28</button>
-                        <button onclick="seleccionarHora(29)">29</button>
-                        <button onclick="seleccionarHora(30)">30</button>
-                        <button onclick="seleccionarHora(1)">1</button>
-                        <button onclick="seleccionarHora(2)">2</button>
-                        <button onclick="seleccionarHora(3)">3</button>
-                    </div>
-                    <div class="row2">
-                        <button onclick="seleccionarHora(4)">4</button>
-                        <button onclick="seleccionarHora(5)">5</button>
-                        <button onclick="seleccionarHora(6)">6</button>
-                        <button onclick="seleccionarHora(7)">7</button>
-                        <button onclick="seleccionarHora(8)">8</button>
-                        <button onclick="seleccionarHora(9)">9</button>
-                        <button onclick="seleccionarHora(10)">10</button>
-                    </div>
-                    <div class="row3">
-                        <button onclick="seleccionarHora(11)">11</button>
-                        <button onclick="seleccionarHora(12)">12</button>
-                        <button onclick="seleccionarHora(13)">13</button>
-                        <button onclick="seleccionarHora(14)">14</button>
-                        <button onclick="seleccionarHora(15)">15</button>
-                        <button onclick="seleccionarHora(16)">16</button>
-                        <button onclick="seleccionarHora(17)">17</button>
-                    </div>
-                    <div class="row4">
-                        <button onclick="seleccionarHora(18)">18</button>
-                        <button onclick="seleccionarHora(19)">19</button>
-                        <button onclick="seleccionarHora(20)">20</button>
-                        <button onclick="seleccionarHora(21)">21</button>
-                        <button onclick="seleccionarHora(22)">22</button>
-                        <button onclick="seleccionarHora(23)">23</button>
-                        <button onclick="seleccionarHora(24)">24</button>
-                    </div>
-                    <div class="row5">
-                        <button onclick="seleccionarHora(25)">25</button>
-                        <button onclick="seleccionarHora(26)">26</button>
-                        <button onclick="seleccionarHora(27)">27</button>
-                        <button onclick="seleccionarHora(28)">28</button>
-                        <button onclick="seleccionarHora(29)">29</button>
-                        <button onclick="seleccionarHora(30)">30</button>
-                        <button onclick="seleccionarHora(31)">31</button>
-                    </div>
-                </div>
-
-
+            <form id="reservas-form">
+            <div class="selector">
+                <label id="lab" for="horas">Selecciona una hora:</label>
+                <select id="horas" name="horas">
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                    <option value="22:30">22:30</option>
+                    <option value="23:00">23:00</option>
+                </select>
             </div>
+            <p class="select-dia"> Selecciona el dia que quiere reservar: </p>
+            <div class="calendar">
+                <div class="calendar-info">
+                    <div class="calendar-prev" id="prev-month">&#9664;</div>
+                    <div class="calendar-month" id="month"></div>
+                    <div class="calendar-year" id="year"></div>
+                    <div class="calendar-next" id="next-month">&#9654;</div>
+                </div>
+                <div class="calendar-week">
+                    <div class="calendar-day calendar-item">Lun</div>
+                    <div class="calendar-day calendar-item">Mar</div>
+                    <div class="calendar-day calendar-item">Mier</div>
+                    <div class="calendar-day calendar-item">Jue</div>
+                    <div class="calendar-day calendar-item">Vie</div>
+                    <div class="calendar-day calendar-item">Sab</div>
+                    <div class="calendar-day calendar-item">Dom</div>
+                </div>
+                <div class="calendar-dates" id="dates">
+
+                </div>
+            </div>
+            <div class="datos-cliente">
+                <input type="text" id="nombre" placeholder="nombre" required>
+                <input type="number" id="telefono" placeholder="telefono" required>
+                <input type="email" id="correo" placeholder="correo" required>
+                <button onclick="enviarDatos()">Enviar datos</button>
+            </div>
+        </form>
         </article>
     </section>
 </body>
 <script src="Main.js"></script>
+<script src="Calendar.js"></script>
 
 </html>
