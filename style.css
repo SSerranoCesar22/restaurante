@@ -1,4 +1,5 @@
-@media (max-width: 1024px) and (min-width: 600px) {
+/*desktop high*/
+@media(min-width: 1024px) {
     body {
         background-color: black;
     }
@@ -20,6 +21,242 @@
         -ms-transition: background-color 0.3s ease;
         -o-transition: background-color 0.3s ease;
     }
+
+    .article2 {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4em;
+    }
+
+    .article2 h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+    .article2 p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .imagesRestauran {
+        margin-top: 5em;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .reservas-form{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .selector{
+        display: flex;
+        gap: 10px;
+        font-size: 42px;
+        
+    }
+    .select-dia{
+        display: flex;
+        font-size: 30px;
+    }
+
+    .calendar {
+        width: 80%;
+        max-width: 600px;
+        margin: 1em auto;
+        padding: .5em 0;
+
+        .calendar-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2em;
+            font-size: 3.5em;
+            text-transform: uppercase;
+        }
+
+        .calendar-prev,
+        .calendar-next {
+            color: crimson;
+            cursor: pointer;
+            font-size: 1.3em;
+        }
+
+        .calendar-prev {
+            margin-right: auto;
+        }
+
+        .calendar-next {
+            margin-left: auto;
+        }
+
+        .calendar-week{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 7em;
+            margin-top: 20px;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .calendar-dates {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 20px;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .calendar-month,
+        .calendar-year {
+            padding: .5em 1em;
+        }
+
+        .calendar-item {
+            align-items: center;
+            line-height: 2;
+            height: 4.5em;
+        }
+
+        .selected{
+            border: 2px solid;
+            background-color: greenyellow;
+            
+        } 
+        .last-days {
+            opacity: .3;
+            pointer-events: none;
+            cursor: not-allowed;
+            font-size: 20px;
+        }
+        .calendar-day{
+            font-size: 1.5em;
+        }
+    }
+    .datos-cliente{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        font-size: 30px;
+    }
+    
+    
+.boton {
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    display: inline-block;
+    color: #FFF;
+    background: #7F8C8D;
+    padding: 7px 20px;
+    white-space: nowrap;
+    border-radius: 100px;
+    margin: 10px 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    font-size: 2.5em;
+}
+.datos-cliente{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.cliente{
+    display: block;
+    width: 300px;
+    padding: 0.375rem 0.75rem;
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #F0E5FD;
+    border-radius: 28px 28px 28px 28px;
+    border: 0px solid #000000;
+    width: 17em;
+    margin-top: 10px;
+}
+.datos-cliente img{
+    margin-right: 22px;
+    height: 55px;
+}
+.user,
+.phone,
+.email {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.user span,
+.phone span,
+.email span {
+    display: flex;
+    align-items: center;
+}
+.enviar{
+  font-weight: 400;
+  color: #ffffff;
+  height: 45px;
+  width: 300px;
+  margin-left: 2em;
+  margin-top: 20px;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 28px 28px 28px 28px;
+  -moz-border-radius: 28px 28px 28px 28px;
+  -webkit-border-radius: 28px 28px 28px 28px;
+  border: 0px solid #000000;
+  cursor: pointer;
+  background-color: salmon;
+  -ms-border-radius: 28px 28px 28px 28px;
+  -o-border-radius: 28px 28px 28px 28px;
+  font-size: 30px;
+  width: 15em;
+}
+
+.phone {
+    margin-bottom: 18px;
+} 
+
+}
+/* desktop mid */
+@media (max-width: 1024px) and (min-width: 600px) {
+    body {
+        background-color: black;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+    .article nav {
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        -webkit-transition: background-color 0.3s ease;
+        -moz-transition: background-color 0.3s ease;
+        -ms-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+}
 
     .article2 {
         color: white;
@@ -129,15 +366,76 @@
         justify-content: center;
         gap: 10px;
     }
+    .cliente{
+        display: block;
+        width: 300px;
+        padding: 0.375rem 0.75rem;
+        align-self: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #F0E5FD;
+        border-radius: 28px 28px 28px 28px;
+        -moz-border-radius: 28px 28px 28px 28px;
+        -webkit-border-radius: 28px 28px 28px 28px;
+        border: 0px solid #000000;
+        -ms-border-radius: 28px 28px 28px 28px;
+        -o-border-radius: 28px 28px 28px 28px;
+    }
+    .datos-cliente img{
+        margin-right: 10px;
+        height: 40px;
+    }
+    .user,
+    .phone,
+    .email {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .user span,
+    .phone span,
+    .email span {
+        display: flex;
+        align-items: center;
+    }
+    .enviar{
+      font-weight: 400;
+      color: #ffffff;
+      height: 45px;
+      width: 300px;
+      margin-left: 3em;
+      margin-top: 10px;
+      text-align: center;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border: 1px solid transparent;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 28px 28px 28px 28px;
+      -moz-border-radius: 28px 28px 28px 28px;
+      -webkit-border-radius: 28px 28px 28px 28px;
+      border: 0px solid #000000;
+      cursor: pointer;
+      background-color: salmon;
+      -ms-border-radius: 28px 28px 28px 28px;
+      -o-border-radius: 28px 28px 28px 28px;
+    }
     
-}
-
-
+    .phone {
+        margin-bottom: 18px;
+    }    
 .boton {
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
     text-align: center;
     text-decoration: none;
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 20px;
     display: inline-block;
     color: #FFF;
     background: #7F8C8D;
@@ -156,6 +454,9 @@
     -moz-border-radius: 100px;
 }
 
+    
+}
+
 .botones {
     background: #E74C3C;
     box-shadow: 0px 5px 0px 0px #C0392B;
@@ -168,74 +469,34 @@
 .botones:active {
     box-shadow: 0px 2px 0px 0px #C0392B;
 }
-.cliente{
-    display: block;
-    width: 300px;
-    padding: 0.375rem 0.75rem;
-    align-self: center;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #F0E5FD;
-    border-radius: 28px 28px 28px 28px;
-    -moz-border-radius: 28px 28px 28px 28px;
-    -webkit-border-radius: 28px 28px 28px 28px;
-    border: 0px solid #000000;
-    -ms-border-radius: 28px 28px 28px 28px;
-    -o-border-radius: 28px 28px 28px 28px;
-}
-.datos-cliente {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Centra el contenido horizontalmente */
-    gap: 10px;
-}
-.datos-cliente img{
-    margin-right: 10px;
-    height: 40px;
-}
-.user,
-.phone,
-.email {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.user span,
-.phone span,
-.email span {
-    display: flex;
-    align-items: center;
-}
-.enviar{
-  font-weight: 400;
-  color: #ffffff;
-  height: 45px;
-  width: 300px;
-  margin-left: 3em;
-  margin-top: 10px;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 28px 28px 28px 28px;
-  -moz-border-radius: 28px 28px 28px 28px;
-  -webkit-border-radius: 28px 28px 28px 28px;
-  border: 0px solid #000000;
-  cursor: pointer;
-  background-color: salmon;
-  -ms-border-radius: 28px 28px 28px 28px;
-  -o-border-radius: 28px 28px 28px 28px;
-}
 
-.phone {
-    margin-bottom: 18px;
+
+
+#horas{
+    background-color: #ffffff;
+    border: 1px solid #bdc3c7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+select {
+    width: 40%;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+    -webkit-transition: border-color 0.3s;
+    -moz-transition: border-color 0.3s;
+    -ms-transition: border-color 0.3s;
+    -o-transition: border-color 0.3s;
+}
+select:hover, select:focus {
+    border-color: #3498db;
+  }
+  #lab{
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+  }
